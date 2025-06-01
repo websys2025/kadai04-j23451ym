@@ -48,6 +48,8 @@
                     if (this.stock >= 1) { 
                         console.log("商品番号: "+this.id+", 商品名: "+this.name+"を購入します。");
                         // 課題4-2. ここにコードを書く
+                        this.stock--;
+                        console.log("残りは"+this.stock+"個です。")
                         // 購入による商品の在庫削減処理
                         
                         // 課題4-3. ここにコードを書く
@@ -72,6 +74,10 @@
             // 商品オブジェクトの生成
 
             // 課題4-2. ここにコードを書く
+            for (let i = 0; i < item_list.length; i++) {
+                const item = item_list[i];
+                itemArea.innerHTML += `<tr><td>${item.name}</td><td>${item.price}円</td><td id="stock${item.id}">${item.stock}</td><td><button id="button${item.id}">購入</button></td></tr>`;
+            }
             // 商品表の作成
 
             // クリックイベント時の購入処理の設定
