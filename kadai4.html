@@ -66,8 +66,8 @@
 
             // 課題4-1. ここにコード書く
             for(let i=0; i<items.length; i++){
-                const item = new Item(items[i].name, items[i].price, items[i].stock);
-                console.log("id: "+item.id+", name: "+item.name+", "+item.price+"円, 残り"+item.stock+"個");
+                item_list[i] = new Item(items[i].name, items[i].price, items[i].stock);
+                console.log("id: "+item_list[i].id+", name: "+item_list[i].name+", "+item_list[i].price+"円, 残り"+item_list[i].stock+"個");
             }
             // 商品オブジェクトの生成
 
